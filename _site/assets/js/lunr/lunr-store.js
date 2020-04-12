@@ -4,4 +4,10 @@ var store = [{
         "tags": ["data wrangling","data science","messy data","machine learning"],
         "url": "http://localhost:4000/hello-world/",
         "teaser": null
+      },{
+        "title": "Resources to Master SLAM and Visual Odometry",
+        "excerpt":"The ability for a computer to automatically and intelligently understand its environment has always been fascinating to me. One computer vision technique developed in the last two decases that has made large strides towards this goal is Simultaneous Localization and Mapping (SLAM). SLAM is a powerful computer vision framework that...","categories": [],
+        "tags": ["computer vision","slam","visual odometry"],
+        "url": "http://localhost:4000/slam-resources/",
+        "teaser": null
       }]

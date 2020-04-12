@@ -1,0 +1,574 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Resources to Master SLAM and Visual Odometry - InteractiveTech</title>
+<meta name="description" content="The ability for a computer to automatically and intelligently understand its environment has always been fascinating to me. One computer vision technique developed in the last two decases that has made large strides towards this goal is Simultaneous Localization and Mapping (SLAM). SLAM is a powerful computer vision framework that is not only powering today’s Augmented Reality(AR) Headsets, but also powering society’s most exciting cutting edge technologies such as robotics and autonomous vehicles.  ">
+
+
+  <meta name="author" content="Andrew Mendez">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="InteractiveTech">
+<meta property="og:title" content="Resources to Master SLAM and Visual Odometry">
+<meta property="og:url" content="http://localhost:4000/slam-resources/">
+
+
+  <meta property="og:description" content="The ability for a computer to automatically and intelligently understand its environment has always been fascinating to me. One computer vision technique developed in the last two decases that has made large strides towards this goal is Simultaneous Localization and Mapping (SLAM). SLAM is a powerful computer vision framework that is not only powering today’s Augmented Reality(AR) Headsets, but also powering society’s most exciting cutting edge technologies such as robotics and autonomous vehicles.  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-04-12T00:00:00-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/slam-resources/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Andrew Mendez",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="InteractiveTech Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          InteractiveTech
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/machine-learning/">Machine Learning</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/andrew_mendez_thumbnail.png" alt="Andrew Mendez" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Andrew Mendez</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Machine Learning Engineer, Researcher</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Washington D.C, USA</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:interactivetech1@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="http://andrewmendez.me" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/AndrewMendez19" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/interactivetech" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://linkedin.com/in/interactivetech" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Resources to Master SLAM and Visual Odometry">
+    <meta itemprop="description" content="The ability for a computer to automatically and intelligently understand its environment has always been fascinating to me. One computer vision technique developed in the last two decases that has made large strides towards this goal is Simultaneous Localization and Mapping (SLAM). SLAM is a powerful computer vision framework that is not only powering today’s Augmented Reality(AR) Headsets, but also powering society’s most exciting cutting edge technologies such as robotics and autonomous vehicles.">
+    <meta itemprop="datePublished" content="2020-04-12T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Resources to Master SLAM and Visual Odometry
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>The ability for a computer to automatically and intelligently understand its environment has always been fascinating to me. One computer vision technique developed in the last two decases that has made large strides towards this goal is Simultaneous Localization and Mapping (SLAM). SLAM is a powerful computer vision framework that is not only powering today’s Augmented Reality(AR) Headsets, but also powering society’s most exciting cutting edge technologies such as robotics and autonomous vehicles.</p>
+
+<p><a href="https://media.giphy.com/media/RrAqQNvF54DgQ/giphy.gif"><img src="https://media.giphy.com/media/RrAqQNvF54DgQ/giphy.gif" alt="ARKit" /></a></p>
+
+<p><a href="https://www.carscoops.com/wp-content/uploads/2020/01/Tesla-Autopliot.gif"><img src="https://www.carscoops.com/wp-content/uploads/2020/01/Tesla-Autopliot.gif" alt="Tesla Autopilot" /></a></p>
+
+<p>The first gif is ARKit, an iOS framework thatimplements Augmented Reality using its own proprietary monocular slam system. The second gif is a demo of Tesla Autopilot, a software system that integrates SLAM with object detection to autonomously manuver on the road.</p>
+
+<p>What is complicated is how to implement and understand. SLAM is a complex, niche technology that is still an active area of research and combines topics in robotics, computer vision, and optimization.</p>
+
+<p>The goal of this post is to share amazing resources I have found that compiles all the key components to implementing your own SLAM and what I will start reading to hopefully implement my own SLAM system! As there are many resources on youtube and papers, these resources I believe will help anyone get started and implement and learn SLAM!</p>
+
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+  <li><a href="#what-is-slam">What is SLAM</a></li>
+  <li><a href="#resources-to-learn-slam">Resources to Learn SLAM</a>
+    <ul>
+      <li><a href="#textbook-14-lectures-on-visual-slam-from-theory-to-practice">Textbook: 14 Lectures on Visual SLAM: From Theory to Practice</a></li>
+      <li><a href="#monocular-visual-odometry-using-opencv">Monocular Visual Odometry using OpenCV</a></li>
+      <li><a href="#exploring-rgbd-odometry">Exploring RGBD Odometry</a></li>
+    </ul>
+  </li>
+  <li><a href="#github-projects">Github projects</a>
+    <ul>
+      <li><a href="#twitchslam">twitchslam</a></li>
+      <li><a href="#opencv-rgbdodometry">OpenCV-RgbdOdometry</a></li>
+      <li><a href="#an-invitation-to-3d-vision-a-tutorial-for-everyone">An Invitation to 3D Vision: A Tutorial for Everyone</a></li>
+    </ul>
+  </li>
+  <li><a href="#off-the-shelf-tools">Off-the-shelf tools</a>
+    <ul>
+      <li><a href="#rgbd-visual-odometry-and-3d-reconstruction-open3d">RGBD Visual Odometry and 3D reconstruction: Open3D</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="what-is-slam">What is SLAM</h1>
+<p>Simultaneous Localization and Mapping (SLAM) is a framework that enables a computer, with only a camera sensor and movement, to simultaneously understand its orientation in 3D space. It is a multi-stage pipeline where the goal is to take a sequence of images, and generate a 3d map of the camera moving in 3D space. The pipeline comprises of visual odometry, back-end filters &amp; optimization, loop closing, and Reconstruction. The input to a SLAM system is a sequence of images (either livestreamed or froma video), and the output is 3D position/orientation of the camera and a map (whether 3d map or a topological map) of the environment.</p>
+
+<figure>
+  
+<img src="/images/slam-resources/SLAM_framework.jpeg" alt="Slambook" />
+
+  <figcaption>SLAM Framework, photo from slambook-en.</figcaption>
+</figure>
+
+<h1 id="resources-to-learn-slam">Resources to Learn SLAM</h1>
+
+<h2 id="textbook-14-lectures-on-visual-slam-from-theory-to-practice">Textbook: 14 Lectures on Visual SLAM: From Theory to Practice</h2>
+<p>Recenetly I discovered this amazing textbook 14 Lectures on Visual SLAM: From Theory to Practice, written byXiang Gao and Tao Zhang and Yi Liu and Qinrui Yan.
+<img src="http://localhost:4000/images/slam-resources/slambook-title.png" alt="linearly separable data" /></p>
+
+<p>This textbook is a compiled end-to-end introduction in to visual SLAM. The book is broken down in a 12 part series, and includes C++ code walkthroughs to develop your own SLAM system! The original textbook is written in chinese, but the author is also providing an english translation here <a href="https://github.com/gaoxiang12/slambook-en">https://github.com/gaoxiang12/slambook-en</a>. The book is not fully translated, but <a href="https://github.com/gaoxiang12/slambook-en/issues/15">se7oluti0n</a> took the liberty to translate the rest of book using google translate! View here to snag the entire translated book here: <a href="https://github.com/se7oluti0n/slambook-en/blob/master/slambook-en.pdf">https://github.com/se7oluti0n/slambook-en/blob/master/slambook-en.pdf</a></p>
+
+<p>Link to the original implementation: <a href="https://github.com/gaoxiang12/slambook2">https://github.com/gaoxiang12/slambook2</a></p>
+
+<h2 id="blogs">Blogs</h2>
+
+<h3 id="monocular-visual-odometry-using-opencv">Monocular Visual Odometry using OpenCV</h3>
+<p><a href="https://avisingh599.github.io/vision/monocular-vo/">https://avisingh599.github.io/vision/monocular-vo/</a>
+Written by Avish Singh, the author implements the first component of a visual slam framework, called visual odometry. Visual Odometry basically extracts unique image features from an image, tracks those features over the next consecutive image, and calculates the relative position and orientation of the camera. This blogpost is great because its written in OpenCV and source code is shared here: <a href="https://github.com/avisingh599/mono-vo">https://github.com/avisingh599/mono-vo</a></p>
+
+<p>Checkout the demo of the code:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/homos4vd_Zs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h3 id="monocular-visual-and-inertial-odometry">Monocular Visual and Inertial Odometry</h3>
+<p>Blog by dattadebrup <a href="https://dattadebrup.github.io/monocular/inertial/odometry/2018/07/23/Monocular-Visual-and-Inertial-Odometry.html">https://dattadebrup.github.io/monocular/inertial/odometry/2018/07/23/Monocular-Visual-and-Inertial-Odometry.html</a></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2coEdSWuACA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h3 id="exploring-rgbd-odometry">Exploring RGBD Odometry</h3>
+<p>Blog by dattadebrup. <a href="https://dattadebrup.github.io/rgbd/depth/odometry/2018/08/02/Exploring-RGBD-Odometry.html">https://dattadebrup.github.io/rgbd/depth/odometry/2018/08/02/Exploring-RGBD-Odometry.html</a></p>
+
+<figure>
+  
+<img src="/images/slam-resources/RGBD_img.png" alt="Slambook" />
+
+  <figcaption>SLAM using RGBD, photo from slambook-en.</figcaption>
+</figure>
+
+<h2 id="github-projects">Github projects</h2>
+
+<h3 id="twitchslam">twitchslam</h3>
+<p><a href="https://github.com/geohot/twitchslam">https://github.com/geohot/twitchslam</a></p>
+
+<figure>
+  
+<img src="/images/slam-resources/example.png" alt="Slambook" />
+
+  <figcaption>output of twitchslam, photo from https://github.com/geohot/twitchslam</figcaption>
+</figure>
+
+<h3 id="opencv-rgbdodometry">OpenCV-RgbdOdometry</h3>
+<p><a href="https://github.com/tzutalin/OpenCV-RgbdOdometry/">https://github.com/tzutalin/OpenCV-RgbdOdometry/</a>
+<a href="https://www.youtube.com/watch?v=NS2L7_uHTAo&amp;feature=youtu.be"><img src="https://j.gifs.com/lYEqx5.gif" alt="Demo video" /></a></p>
+<h3 id="an-invitation-to-3d-vision-a-tutorial-for-everyone">An Invitation to 3D Vision: A Tutorial for Everyone</h3>
+<p><a href="https://github.com/sunglok/3dv_tutorial">https://github.com/sunglok/3dv_tutorial</a></p>
+
+<p>Beginner tutorial on basic theory of 3D vision and implement their own applications using [OpenCV]. Example code is also provided! The example codes are written as short as possible (mostly <strong>less than 100 lines</strong>) to be clear and easy to understand.</p>
+
+<ul>
+  <li><a href="https://github.com/sunglok/3dv_tutorial/releases/download/misc/3dv_slides.pdf">tutorial slides</a></li>
+</ul>
+
+<h2 id="off-the-shelf-tools">Off-the-shelf tools</h2>
+
+<h3 id="rgbd-visual-odometry-and-3d-reconstruction-open3d">RGBD Visual Odometry and 3D reconstruction: Open3D</h3>
+<p>Slightly related topic to SLAM is 3D reconstruction. 3D reconstruction utilizes visual odometry, however rather than focusing on creating a 3D map reconstruction, 3D reconstruction focuses on consolidating 3D point clouds into a final 3D model. 
+<a href="http://www.open3d.org/docs/release/tutorial/ReconstructionSystem/index.html#reconstruction-system">http://www.open3d.org/docs/release/tutorial/ReconstructionSystem/index.html#reconstruction-system</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#computer-vision" class="page__taxonomy-item" rel="tag">computer vision</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#slam" class="page__taxonomy-item" rel="tag">slam</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#visual-odometry" class="page__taxonomy-item" rel="tag">visual odometry</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-04-12T00:00:00-04:00">April 12, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Resources+to+Master+SLAM+and+Visual+Odometry%20http%3A%2F%2Flocalhost%3A4000%2Fslam-resources%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fslam-resources%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fslam-resources%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/hello-world/" class="pagination--pager" title="Hello World
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/hello-world/" rel="permalink">Hello World
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Data Wrangling, Data Science, Messy Data
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/AndrewMendez19" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/interactivetech" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Andrew Mendez. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

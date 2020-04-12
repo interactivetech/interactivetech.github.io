@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-12T14:15:42-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Andrew Mendez</title><subtitle>Blog about projects and ideas in computer vision, machine learning, and augmented reality.</subtitle><author><name>Andrew Mendez</name></author><entry><title type="html">Hello World</title><link href="http://localhost:4000/hello-world/" rel="alternate" type="text/html" title="Hello World" /><published>2020-04-12T00:00:00-04:00</published><updated>2020-04-12T00:00:00-04:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world/">&lt;h1 id=&quot;h1-heading&quot;&gt;H1 Heading&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-12T18:20:06-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">InteractiveTech</title><subtitle>Blog about projects and ideas in computer vision, machine learning, and augmented reality.</subtitle><author><name>Andrew Mendez</name></author><entry><title type="html">Hello World</title><link href="http://localhost:4000/hello-world/" rel="alternate" type="text/html" title="Hello World" /><published>2020-04-12T00:00:00-04:00</published><updated>2020-04-12T00:00:00-04:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world/">&lt;h1 id=&quot;h1-heading&quot;&gt;H1 Heading&lt;/h1&gt;
 
 &lt;h2 id=&quot;h2-heading&quot;&gt;H2 Heading&lt;/h2&gt;
 
@@ -52,4 +52,112 @@
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;z=x+y&lt;/script&gt;
 
-&lt;p&gt;You can also put it inline &lt;script type=&quot;math/tex&quot;&gt;z=x+y&lt;/script&gt;&lt;/p&gt;</content><author><name>Andrew Mendez</name></author><category term="data wrangling" /><category term="data science" /><category term="messy data" /><category term="machine learning" /><summary type="html">Data Wrangling, Data Science, Messy Data</summary></entry></feed>
+&lt;p&gt;You can also put it inline &lt;script type=&quot;math/tex&quot;&gt;z=x+y&lt;/script&gt;&lt;/p&gt;</content><author><name>Andrew Mendez</name></author><category term="data wrangling" /><category term="data science" /><category term="messy data" /><category term="machine learning" /><summary type="html">Data Wrangling, Data Science, Messy Data</summary></entry><entry><title type="html">Resources to Master SLAM and Visual Odometry</title><link href="http://localhost:4000/slam-resources/" rel="alternate" type="text/html" title="Resources to Master SLAM and Visual Odometry" /><published>2020-04-12T00:00:00-04:00</published><updated>2020-04-12T00:00:00-04:00</updated><id>http://localhost:4000/slam-resources</id><content type="html" xml:base="http://localhost:4000/slam-resources/">&lt;p&gt;The ability for a computer to automatically and intelligently understand its environment has always been fascinating to me. One computer vision technique developed in the last two decases that has made large strides towards this goal is Simultaneous Localization and Mapping (SLAM). SLAM is a powerful computer vision framework that is not only powering today’s Augmented Reality(AR) Headsets, but also powering society’s most exciting cutting edge technologies such as robotics and autonomous vehicles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://media.giphy.com/media/RrAqQNvF54DgQ/giphy.gif&quot;&gt;&lt;img src=&quot;https://media.giphy.com/media/RrAqQNvF54DgQ/giphy.gif&quot; alt=&quot;ARKit&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.carscoops.com/wp-content/uploads/2020/01/Tesla-Autopliot.gif&quot;&gt;&lt;img src=&quot;https://www.carscoops.com/wp-content/uploads/2020/01/Tesla-Autopliot.gif&quot; alt=&quot;Tesla Autopilot&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The first gif is ARKit, an iOS framework thatimplements Augmented Reality using its own proprietary monocular slam system. The second gif is a demo of Tesla Autopilot, a software system that integrates SLAM with object detection to autonomously manuver on the road.&lt;/p&gt;
+
+&lt;p&gt;What is complicated is how to implement and understand. SLAM is a complex, niche technology that is still an active area of research and combines topics in robotics, computer vision, and optimization.&lt;/p&gt;
+
+&lt;p&gt;The goal of this post is to share amazing resources I have found that compiles all the key components to implementing your own SLAM and what I will start reading to hopefully implement my own SLAM system! As there are many resources on youtube and papers, these resources I believe will help anyone get started and implement and learn SLAM!&lt;/p&gt;
+
+&lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-slam&quot;&gt;What is SLAM&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#resources-to-learn-slam&quot;&gt;Resources to Learn SLAM&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#textbook-14-lectures-on-visual-slam-from-theory-to-practice&quot;&gt;Textbook: 14 Lectures on Visual SLAM: From Theory to Practice&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#monocular-visual-odometry-using-opencv&quot;&gt;Monocular Visual Odometry using OpenCV&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#exploring-rgbd-odometry&quot;&gt;Exploring RGBD Odometry&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#github-projects&quot;&gt;Github projects&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#twitchslam&quot;&gt;twitchslam&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#opencv-rgbdodometry&quot;&gt;OpenCV-RgbdOdometry&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#an-invitation-to-3d-vision-a-tutorial-for-everyone&quot;&gt;An Invitation to 3D Vision: A Tutorial for Everyone&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#off-the-shelf-tools&quot;&gt;Off-the-shelf tools&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#rgbd-visual-odometry-and-3d-reconstruction-open3d&quot;&gt;RGBD Visual Odometry and 3D reconstruction: Open3D&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;what-is-slam&quot;&gt;What is SLAM&lt;/h1&gt;
+&lt;p&gt;Simultaneous Localization and Mapping (SLAM) is a framework that enables a computer, with only a camera sensor and movement, to simultaneously understand its orientation in 3D space. It is a multi-stage pipeline where the goal is to take a sequence of images, and generate a 3d map of the camera moving in 3D space. The pipeline comprises of visual odometry, back-end filters &amp;amp; optimization, loop closing, and Reconstruction. The input to a SLAM system is a sequence of images (either livestreamed or froma video), and the output is 3D position/orientation of the camera and a map (whether 3d map or a topological map) of the environment.&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/images/slam-resources/SLAM_framework.jpeg&quot; alt=&quot;Slambook&quot; /&gt;
+
+  &lt;figcaption&gt;SLAM Framework, photo from slambook-en.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;resources-to-learn-slam&quot;&gt;Resources to Learn SLAM&lt;/h1&gt;
+
+&lt;h2 id=&quot;textbook-14-lectures-on-visual-slam-from-theory-to-practice&quot;&gt;Textbook: 14 Lectures on Visual SLAM: From Theory to Practice&lt;/h2&gt;
+&lt;p&gt;Recenetly I discovered this amazing textbook 14 Lectures on Visual SLAM: From Theory to Practice, written byXiang Gao and Tao Zhang and Yi Liu and Qinrui Yan.
+&lt;img src=&quot;http://localhost:4000/images/slam-resources/slambook-title.png&quot; alt=&quot;linearly separable data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This textbook is a compiled end-to-end introduction in to visual SLAM. The book is broken down in a 12 part series, and includes C++ code walkthroughs to develop your own SLAM system! The original textbook is written in chinese, but the author is also providing an english translation here &lt;a href=&quot;https://github.com/gaoxiang12/slambook-en&quot;&gt;https://github.com/gaoxiang12/slambook-en&lt;/a&gt;. The book is not fully translated, but &lt;a href=&quot;https://github.com/gaoxiang12/slambook-en/issues/15&quot;&gt;se7oluti0n&lt;/a&gt; took the liberty to translate the rest of book using google translate! View here to snag the entire translated book here: &lt;a href=&quot;https://github.com/se7oluti0n/slambook-en/blob/master/slambook-en.pdf&quot;&gt;https://github.com/se7oluti0n/slambook-en/blob/master/slambook-en.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Link to the original implementation: &lt;a href=&quot;https://github.com/gaoxiang12/slambook2&quot;&gt;https://github.com/gaoxiang12/slambook2&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;blogs&quot;&gt;Blogs&lt;/h2&gt;
+
+&lt;h3 id=&quot;monocular-visual-odometry-using-opencv&quot;&gt;Monocular Visual Odometry using OpenCV&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://avisingh599.github.io/vision/monocular-vo/&quot;&gt;https://avisingh599.github.io/vision/monocular-vo/&lt;/a&gt;
+Written by Avish Singh, the author implements the first component of a visual slam framework, called visual odometry. Visual Odometry basically extracts unique image features from an image, tracks those features over the next consecutive image, and calculates the relative position and orientation of the camera. This blogpost is great because its written in OpenCV and source code is shared here: &lt;a href=&quot;https://github.com/avisingh599/mono-vo&quot;&gt;https://github.com/avisingh599/mono-vo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Checkout the demo of the code:&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/homos4vd_Zs&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;monocular-visual-and-inertial-odometry&quot;&gt;Monocular Visual and Inertial Odometry&lt;/h3&gt;
+&lt;p&gt;Blog by dattadebrup &lt;a href=&quot;https://dattadebrup.github.io/monocular/inertial/odometry/2018/07/23/Monocular-Visual-and-Inertial-Odometry.html&quot;&gt;https://dattadebrup.github.io/monocular/inertial/odometry/2018/07/23/Monocular-Visual-and-Inertial-Odometry.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/2coEdSWuACA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;exploring-rgbd-odometry&quot;&gt;Exploring RGBD Odometry&lt;/h3&gt;
+&lt;p&gt;Blog by dattadebrup. &lt;a href=&quot;https://dattadebrup.github.io/rgbd/depth/odometry/2018/08/02/Exploring-RGBD-Odometry.html&quot;&gt;https://dattadebrup.github.io/rgbd/depth/odometry/2018/08/02/Exploring-RGBD-Odometry.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/images/slam-resources/RGBD_img.png&quot; alt=&quot;Slambook&quot; /&gt;
+
+  &lt;figcaption&gt;SLAM using RGBD, photo from slambook-en.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;github-projects&quot;&gt;Github projects&lt;/h2&gt;
+
+&lt;h3 id=&quot;twitchslam&quot;&gt;twitchslam&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/geohot/twitchslam&quot;&gt;https://github.com/geohot/twitchslam&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  
+&lt;img src=&quot;/images/slam-resources/example.png&quot; alt=&quot;Slambook&quot; /&gt;
+
+  &lt;figcaption&gt;output of twitchslam, photo from https://github.com/geohot/twitchslam&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;opencv-rgbdodometry&quot;&gt;OpenCV-RgbdOdometry&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tzutalin/OpenCV-RgbdOdometry/&quot;&gt;https://github.com/tzutalin/OpenCV-RgbdOdometry/&lt;/a&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=NS2L7_uHTAo&amp;amp;feature=youtu.be&quot;&gt;&lt;img src=&quot;https://j.gifs.com/lYEqx5.gif&quot; alt=&quot;Demo video&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;an-invitation-to-3d-vision-a-tutorial-for-everyone&quot;&gt;An Invitation to 3D Vision: A Tutorial for Everyone&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/sunglok/3dv_tutorial&quot;&gt;https://github.com/sunglok/3dv_tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Beginner tutorial on basic theory of 3D vision and implement their own applications using [OpenCV]. Example code is also provided! The example codes are written as short as possible (mostly &lt;strong&gt;less than 100 lines&lt;/strong&gt;) to be clear and easy to understand.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sunglok/3dv_tutorial/releases/download/misc/3dv_slides.pdf&quot;&gt;tutorial slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;off-the-shelf-tools&quot;&gt;Off-the-shelf tools&lt;/h2&gt;
+
+&lt;h3 id=&quot;rgbd-visual-odometry-and-3d-reconstruction-open3d&quot;&gt;RGBD Visual Odometry and 3D reconstruction: Open3D&lt;/h3&gt;
+&lt;p&gt;Slightly related topic to SLAM is 3D reconstruction. 3D reconstruction utilizes visual odometry, however rather than focusing on creating a 3D map reconstruction, 3D reconstruction focuses on consolidating 3D point clouds into a final 3D model. 
+&lt;a href=&quot;http://www.open3d.org/docs/release/tutorial/ReconstructionSystem/index.html#reconstruction-system&quot;&gt;http://www.open3d.org/docs/release/tutorial/ReconstructionSystem/index.html#reconstruction-system&lt;/a&gt;&lt;/p&gt;</content><author><name>Andrew Mendez</name></author><category term="computer vision" /><category term="slam" /><category term="visual odometry" /><summary type="html">The ability for a computer to automatically and intelligently understand its environment has always been fascinating to me. One computer vision technique developed in the last two decases that has made large strides towards this goal is Simultaneous Localization and Mapping (SLAM). SLAM is a powerful computer vision framework that is not only powering today’s Augmented Reality(AR) Headsets, but also powering society’s most exciting cutting edge technologies such as robotics and autonomous vehicles.</summary></entry></feed>
