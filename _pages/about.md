@@ -3,7 +3,7 @@ title: "About"
 layout: single
 permalink: /about/
 header:
-  image: "/images/Cornell-Tech-rooftop-2019.png"
+  image: "/images/Cornell-Tech-lawn-2018.jpg"
 ---
 Hi there, thanks for visiting my blog! My name is Andrew and I am currently a Machine Learning Engineer in the DC Metro Area. My passions and expertise are in machine learning, computer vision, and augmented reality. 
 
