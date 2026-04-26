@@ -5,110 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Belt Tension Frequency Calculator</title>
   <style>
-    :root {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #111;
-      background: #f7f7f7;
-    }
-    body {
-      margin: 0;
-      padding: 16px;
-    }
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 6px 24px rgba(0,0,0,.08);
-    }
-    h1 {
-      font-size: 1.5rem;
-      margin: 0 0 8px;
-    }
-    p {
-      line-height: 1.45;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    @media (min-width: 700px) {
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    label {
-      display: block;
-      font-weight: 650;
-      margin-bottom: 4px;
-    }
-    input {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 12px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
-    button {
-      width: 100%;
-      padding: 13px 14px;
-      border: 0;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      background: #111;
-      color: white;
-      margin: 6px 0;
-    }
-    button.secondary {
-      background: #444;
-    }
-    .card {
-      background: #fafafa;
-      border: 1px solid #e4e4e4;
-      border-radius: 14px;
-      padding: 14px;
-      margin: 14px 0;
-    }
-    .result {
-      font-size: 1.4rem;
-      font-weight: 800;
-    }
-    .muted {
-      color: #555;
-      font-size: .95rem;
-    }
-    .small {
-      font-size: .9rem;
-    }
+    :root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #111; background: #f7f7f7; }
+    body { margin: 0; padding: 16px; }
+    main { max-width: 780px; margin: 0 auto; background: white; border-radius: 18px; padding: 20px; box-shadow: 0 6px 24px rgba(0,0,0,.08); }
+    h1 { font-size: 1.5rem; margin: 0 0 8px; }
+    h2 { margin-bottom: 10px; }
+    p { line-height: 1.45; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 700px) { .grid { grid-template-columns: 1fr 1fr; } }
+    label { display: block; font-weight: 650; margin-bottom: 4px; }
+    input { width: 100%; box-sizing: border-box; padding: 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 10px; }
+    button { width: 100%; padding: 13px 14px; border: 0; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; background: #111; color: white; margin: 6px 0; }
+    button.secondary { background: #444; }
+    .card { background: #fafafa; border: 1px solid #e4e4e4; border-radius: 14px; padding: 14px; margin: 14px 0; }
+    .preset { background: #eef7ff; border-color: #cfe8ff; }
+    .result { font-size: 1.45rem; font-weight: 800; }
+    .muted { color: #555; font-size: .95rem; }
+    .small { font-size: .9rem; }
     .ok { color: #0a7a2f; }
     .warn { color: #a15c00; }
     .bad { color: #a00000; }
-    canvas {
-      width: 100%;
-      height: 120px;
-      border-radius: 10px;
-      background: #111;
-      margin-top: 8px;
-    }
-    code {
-      background: #eee;
-      padding: 2px 5px;
-      border-radius: 5px;
-    }
+    canvas { width: 100%; height: 120px; border-radius: 10px; background: #111; margin-top: 8px; }
+    code { background: #eee; padding: 2px 5px; border-radius: 5px; }
   </style>
 </head>
 <body>
 <main>
   <h1>Belt Tension Frequency Calculator</h1>
-  <p class="muted">
-    This estimates belt tension from the vibration frequency of a plucked belt span.
-    It runs locally in your browser; audio is not uploaded anywhere.
-  </p>
+  <p class="muted">This estimates belt tension from the vibration frequency of a plucked belt span. It runs locally in your browser; audio is not uploaded anywhere.</p>
+
+  <div class="card preset">
+    <h2>Current preset</h2>
+    <p><strong>Speed Queen / Alliance 804985 washer belt test</strong></p>
+    <p class="small">Preset values: 54 lbf target tension, 13.5 in measured free span, 2.47 oz belt weight, 56.5 in whole belt loop length. Expected target frequency should be about <strong>102 Hz</strong>.</p>
+  </div>
 
   <div class="card">
     <h2>Inputs</h2>
@@ -119,15 +49,15 @@
       </div>
       <div>
         <label for="spanInches">Free span length, inches</label>
-        <input id="spanInches" type="number" step="0.01" value="12">
+        <input id="spanInches" type="number" step="0.01" value="13.5">
       </div>
       <div>
         <label for="beltWeightOz">Whole belt weight, oz</label>
-        <input id="beltWeightOz" type="number" step="0.01" value="2.0">
+        <input id="beltWeightOz" type="number" step="0.01" value="2.47">
       </div>
       <div>
         <label for="beltLengthInches">Whole belt loop length, inches</label>
-        <input id="beltLengthInches" type="number" step="0.01" value="48">
+        <input id="beltLengthInches" type="number" step="0.01" value="56.5">
       </div>
       <div>
         <label for="manualHz">Measured frequency, Hz</label>
@@ -145,14 +75,8 @@
     <button id="startBtn">Start microphone</button>
     <button id="holdBtn" class="secondary">Use current frequency</button>
     <button id="stopBtn" class="secondary">Stop microphone</button>
-    <p>
-      Current frequency:
-      <span id="liveHz" class="result">--</span>
-      <span class="muted">Hz</span>
-    </p>
-    <p class="muted small" id="status">
-      Tap Start, allow microphone access, hold the phone near the belt span, then pluck the belt.
-    </p>
+    <p>Current frequency: <span id="liveHz" class="result">--</span> <span class="muted">Hz</span></p>
+    <p class="muted small" id="status">Tap Start, allow microphone access, hold the phone near the 13.5 inch belt span, then pluck the belt.</p>
     <canvas id="scope" width="720" height="160"></canvas>
   </div>
 
@@ -166,34 +90,23 @@
 
   <div class="card">
     <h2>Formula used</h2>
-    <p>
-      <code>T = 4 W L² f² / g</code>
-    </p>
-    <p class="small">
-      T = belt tension in lbf, W = belt weight per length in lb/ft,
-      L = free span in ft, f = frequency in Hz, g = 32.174 ft/s².
-    </p>
-    <p class="small">
-      To get W from a whole belt: <code>W = (belt weight oz / 16) / (belt length inches / 12)</code>.
-    </p>
+    <p><code>T = 4 W L² f² / g</code></p>
+    <p class="small">T = belt tension in lbf, W = belt weight per length in lb/ft, L = free span in ft, f = frequency in Hz, g = 32.174 ft/s².</p>
+    <p class="small">To get W from a whole belt: <code>W = (belt weight oz / 16) / (belt length inches / 12)</code>.</p>
   </div>
 </main>
 
 <script>
 (() => {
   const G = 32.174;
-
   const el = id => document.getElementById(id);
-  const inputs = ["targetTension","spanInches","beltWeightOz","beltLengthInches","manualHz","knownW"]
-    .map(el);
-
+  const inputs = ["targetTension","spanInches","beltWeightOz","beltLengthInches","manualHz","knownW"].map(el);
   let audioContext = null;
   let analyser = null;
   let mediaStream = null;
   let data = null;
   let raf = null;
   let lastGoodHz = null;
-
   const scope = el("scope");
   const ctx = scope.getContext("2d");
 
@@ -205,11 +118,9 @@
   function beltWeightPerFoot() {
     const known = num("knownW");
     if (Number.isFinite(known) && known > 0) return known;
-
     const oz = num("beltWeightOz");
     const inches = num("beltLengthInches");
     if (!Number.isFinite(oz) || !Number.isFinite(inches) || oz <= 0 || inches <= 0) return NaN;
-
     return (oz / 16) / (inches / 12);
   }
 
@@ -233,7 +144,6 @@
     const hz = num("manualHz");
     const tHz = targetFrequency();
     const calcT = tensionFromHz(hz);
-
     el("wResult").textContent = Number.isFinite(W) ? W.toFixed(5) : "--";
     el("targetHz").textContent = Number.isFinite(tHz) ? tHz.toFixed(1) : "--";
     el("calcTension").textContent = Number.isFinite(calcT) ? calcT.toFixed(1) : "--";
@@ -244,9 +154,7 @@
       const pct = (diff / target) * 100;
       const cls = Math.abs(pct) <= 5 ? "ok" : Math.abs(pct) <= 15 ? "warn" : "bad";
       el("comparison").className = cls;
-      el("comparison").textContent =
-        `Measured tension is ${diff >= 0 ? "+" : ""}${diff.toFixed(1)} lbf, ` +
-        `${pct >= 0 ? "+" : ""}${pct.toFixed(1)}% versus target.`;
+      el("comparison").textContent = `Measured tension is ${diff >= 0 ? "+" : ""}${diff.toFixed(1)} lbf, ${pct >= 0 ? "+" : ""}${pct.toFixed(1)}% versus target.`;
     } else {
       el("comparison").className = "muted";
       el("comparison").textContent = "Enter or capture a measured frequency to compare.";
@@ -271,16 +179,12 @@
     ctx.stroke();
   }
 
-  // Autocorrelation pitch detector. Works best for a clear pluck in a quiet room.
   function autoCorrelate(buffer, sampleRate) {
     let rms = 0;
     for (let i = 0; i < buffer.length; i++) rms += buffer[i] * buffer[i];
     rms = Math.sqrt(rms / buffer.length);
-
-    // Ignore very quiet input.
     if (rms < 0.012) return { hz: NaN, rms };
 
-    // Trim to the region where the waveform is not too close to silence.
     let start = 0;
     let end = buffer.length - 1;
     const threshold = 0.02;
@@ -290,31 +194,21 @@
     const size = trimmed.length;
     if (size < sampleRate / 500) return { hz: NaN, rms };
 
-    // Belt plucks for this use are usually in roughly 20 to 500 Hz.
     const minHz = 20;
     const maxHz = 500;
     const minLag = Math.floor(sampleRate / maxHz);
     const maxLag = Math.min(Math.floor(sampleRate / minHz), size - 2);
-
     let bestLag = -1;
     let bestCorr = 0;
 
     for (let lag = minLag; lag <= maxLag; lag++) {
       let corr = 0;
-      for (let i = 0; i < size - lag; i++) {
-        corr += trimmed[i] * trimmed[i + lag];
-      }
+      for (let i = 0; i < size - lag; i++) corr += trimmed[i] * trimmed[i + lag];
       corr = corr / (size - lag);
-
-      if (corr > bestCorr) {
-        bestCorr = corr;
-        bestLag = lag;
-      }
+      if (corr > bestCorr) { bestCorr = corr; bestLag = lag; }
     }
-
     if (bestLag <= 0 || bestCorr < 0.001) return { hz: NaN, rms };
 
-    // Parabolic interpolation around best lag for a smoother estimate.
     const corrAt = lag => {
       let corr = 0;
       for (let i = 0; i < size - lag; i++) corr += trimmed[i] * trimmed[i + lag];
@@ -326,32 +220,20 @@
     const denom = (c0 - 2 * c1 + c2);
     const shift = denom ? 0.5 * (c0 - c2) / denom : 0;
     const refinedLag = bestLag + shift;
-
     return { hz: sampleRate / refinedLag, rms };
   }
 
   async function startMic() {
     try {
-      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-        throw new Error("Microphone API is not available. Try Safari/Chrome over HTTPS.");
-      }
-
-      mediaStream = await navigator.mediaDevices.getUserMedia({
-        audio: {
-          echoCancellation: false,
-          noiseSuppression: false,
-          autoGainControl: false
-        }
-      });
-
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) throw new Error("Microphone API is not available. Try Safari/Chrome over HTTPS.");
+      mediaStream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
       audioContext = new (window.AudioContext || window.webkitAudioContext)();
       const source = audioContext.createMediaStreamSource(mediaStream);
       analyser = audioContext.createAnalyser();
       analyser.fftSize = 4096;
       data = new Float32Array(analyser.fftSize);
       source.connect(analyser);
-
-      el("status").textContent = "Listening. Pluck the belt. Use a repeating, stable Hz reading.";
+      el("status").textContent = "Listening. Pluck the belt. Use a repeating, stable Hz reading near the 102 Hz target.";
       tick();
     } catch (err) {
       el("status").textContent = err.message || String(err);
@@ -362,34 +244,23 @@
     if (!analyser || !audioContext) return;
     analyser.getFloatTimeDomainData(data);
     drawWaveform(data);
-
     const { hz, rms } = autoCorrelate(data, audioContext.sampleRate);
-
     if (Number.isFinite(hz)) {
-      // Smooth only a little; belt pluck signals are short.
       lastGoodHz = lastGoodHz ? (0.65 * lastGoodHz + 0.35 * hz) : hz;
       el("liveHz").textContent = lastGoodHz.toFixed(1);
-      el("status").textContent = `Signal OK. RMS ${rms.toFixed(3)}. Pluck again and look for repeatable readings.`;
+      el("status").textContent = `Signal OK. RMS ${rms.toFixed(3)}. Pluck again and look for repeatable readings near 102 Hz.`;
     } else {
       el("liveHz").textContent = lastGoodHz ? lastGoodHz.toFixed(1) : "--";
       el("status").textContent = "Listening. Pluck the belt closer to the microphone if no Hz appears.";
     }
-
     raf = requestAnimationFrame(tick);
   }
 
   function stopMic() {
     if (raf) cancelAnimationFrame(raf);
     raf = null;
-
-    if (mediaStream) {
-      mediaStream.getTracks().forEach(track => track.stop());
-      mediaStream = null;
-    }
-    if (audioContext) {
-      audioContext.close();
-      audioContext = null;
-    }
+    if (mediaStream) { mediaStream.getTracks().forEach(track => track.stop()); mediaStream = null; }
+    if (audioContext) { audioContext.close(); audioContext = null; }
     analyser = null;
     data = null;
     el("status").textContent = "Stopped.";
