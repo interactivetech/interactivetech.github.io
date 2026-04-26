@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>I Needed a Washer Belt Tension Gauge… So I Built One With My iPhone and ChatGPT 5.5</title>
+  <meta name="description" content="A Q&A-style adventure replacing a washer motor and belt, measuring belt tension from frequency, and co-creating a GitHub Pages calculator with ChatGPT 5.5." />
+  <style>
+    :root {
+      color: #111;
+      background: #f7f7f7;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    body { margin: 0; padding: 18px; }
+    article {
+      max-width: 860px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 22px;
+      padding: clamp(20px, 4vw, 44px);
+      box-shadow: 0 8px 32px rgba(0,0,0,.08);
+    }
+    h1 {
+      font-size: clamp(2rem, 7vw, 4rem);
+      line-height: 1.02;
+      margin: 0 0 12px;
+      letter-spacing: -0.045em;
+    }
+    h2 {
+      font-size: clamp(1.35rem, 4vw, 2rem);
+      line-height: 1.15;
+      margin-top: 44px;
+      letter-spacing: -0.025em;
+    }
+    p { font-size: 1.06rem; }
+    .dek {
+      font-size: clamp(1.1rem, 3vw, 1.35rem);
+      color: #444;
+      margin: 0 0 20px;
+    }
+    .meta {
+      color: #666;
+      font-size: .95rem;
+      margin-bottom: 26px;
+    }
+    .callout {
+      background: #eef7ff;
+      border: 1px solid #cfe8ff;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 24px 0;
+    }
+    .formula {
+      overflow-x: auto;
+      background: #f3f3f3;
+      border: 1px solid #e1e1e1;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 1.15rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 1rem;
+    }
+    th, td {
+      border-bottom: 1px solid #e6e6e6;
+      text-align: left;
+      padding: 10px 8px;
+      vertical-align: top;
+    }
+    th { background: #fafafa; }
+    a { color: #0057c2; font-weight: 700; }
+    .button {
+      display: inline-block;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 13px 18px;
+      border-radius: 12px;
+      margin: 8px 8px 8px 0;
+    }
+    .button.secondary { background: #444; }
+    ul { padding-left: 1.4rem; }
+    li { margin: 6px 0; }
+    footer {
+      margin-top: 48px;
+      padding-top: 22px;
+      border-top: 1px solid #e6e6e6;
+      color: #666;
+      font-size: .95rem;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <h1>I Needed a Washer Belt Tension Gauge… So I Built One With My iPhone and ChatGPT 5.5</h1>
+  <p class="dek">Replacing the motor and belt on a washer sounds simple until one tiny question turns into a physics experiment: how tight is the belt supposed to be?</p>
+  <p class="meta">A Q&A-style repair story about a Speed Queen washer belt, frequency-based tension measurement, and a small calculator website co-created with ChatGPT 5.5.</p>
+
+  <div class="callout">
+    <p><strong>Try the calculator:</strong> I published the belt tension frequency calculator on GitHub Pages here:</p>
+    <p><a class="button" href="https://interactivetech.github.io/belt-tension/">Open the washer belt tension calculator</a></p>
+    <p>The calculator is preset for my test: 54 lbf target tension, 13.5 in free span, 2.47 oz belt weight, and 56.5 in belt loop length.</p>
+  </div>
+
+  <h2>Q: I need a tension gauge. How could I test the tension without the gauge?</h2>
+  <p>A belt tension gauge measures how tight a belt is, but I did not have one sitting around. The old-school method is to push on the belt and measure deflection, but that only tells part of the story. A belt can deflect the “right” amount and still be too loose or too tight depending on how much force it takes to move it.</p>
+  <p>Then I learned that many digital belt tension gauges use sound.</p>
+  <p>You pluck the belt, the gauge listens to the vibration frequency, and then it calculates tension. A tight belt vibrates at a higher frequency. A loose belt vibrates at a lower frequency.</p>
+  <p>That led to the obvious question: <strong>Could my iPhone microphone hear the belt frequency?</strong></p>
+  <p>Turns out, yes — at least well enough for a DIY sanity check.</p>
+
+  <h2>Q: How does a digital belt tension gauge actually work?</h2>
+  <p>A belt span acts a little like a guitar string. When you pluck it, it vibrates at a natural frequency.</p>
+  <p>The basic formula is:</p>
+  <div class="formula">T = 4mL²f²</div>
+  <p>Where:</p>
+  <ul>
+    <li><strong>T</strong> = belt tension</li>
+    <li><strong>m</strong> = belt mass per unit length</li>
+    <li><strong>L</strong> = free span length</li>
+    <li><strong>f</strong> = vibration frequency</li>
+  </ul>
+  <p>In pounds-force, using belt <strong>weight per foot</strong>, the formula becomes:</p>
+  <div class="formula">T<sub>lbf</sub> = 4WL²f² / 32.174</div>
+  <p>Where:</p>
+  <ul>
+    <li><strong>T<sub>lbf</sub></strong> = belt tension in pounds-force</li>
+    <li><strong>W</strong> = belt weight per length in lb/ft</li>
+    <li><strong>L</strong> = free belt span in feet</li>
+    <li><strong>f</strong> = frequency in Hz</li>
+    <li><strong>32.174</strong> = gravity constant in ft/s²</li>
+  </ul>
+  <p>So the tension gauge is basically doing three things: listening to the belt, finding the frequency, and plugging the frequency into the formula. The magic is not really magic. It is physics plus signal processing.</p>
+
+  <h2>Q: What parts did I need to measure?</h2>
+  <p>For my washer belt, I needed four numbers:</p>
+  <ol>
+    <li>Target belt tension</li>
+    <li>Free span length</li>
+    <li>Whole belt weight</li>
+    <li>Whole belt loop length</li>
+  </ol>
+  <p>The belt was a Speed Queen / Alliance washer belt, part number <strong>804985</strong>. The belt length I used was <strong>56.5 inches</strong>.</p>
+  <p>Then I weighed the belt: <strong>2.47 oz</strong>.</p>
+  <p>The target tension I was working from was <strong>54 lbf</strong>.</p>
+  <p>At first, I measured from the center of the main pulley to the center of the motor pulley and got about <strong>15 inches</strong>. But that is not quite the right measurement.</p>
+  <p>The correct measurement is the <strong>free span</strong>: the straight section of belt from where it leaves one pulley to where it starts touching the other pulley.</p>
+  <p>After measuring that section more carefully, I got <strong>13.5 inches</strong>.</p>
+  <table>
+    <thead><tr><th>Measurement</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Target tension</td><td>54 lbf</td></tr>
+      <tr><td>Belt weight</td><td>2.47 oz</td></tr>
+      <tr><td>Belt loop length</td><td>56.5 in</td></tr>
+      <tr><td>Free span length</td><td>13.5 in</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Q: How did I calculate the belt weight per foot?</h2>
+  <p>The belt weight per foot is:</p>
+  <div class="formula">W = belt weight in lb / belt length in ft</div>
+  <p>My belt was <strong>2.47 oz</strong>, so first convert ounces to pounds:</p>
+  <div class="formula">2.47 ÷ 16 = 0.1544 lb</div>
+  <p>The belt loop length was <strong>56.5 inches</strong>, so convert that to feet:</p>
+  <div class="formula">56.5 ÷ 12 = 4.708 ft</div>
+  <p>Then:</p>
+  <div class="formula">W = 0.1544 ÷ 4.708 ≈ 0.03279 lb/ft</div>
+  <p>That number became one of the key inputs for the website.</p>
+
+  <h2>Q: What frequency should the belt vibrate at?</h2>
+  <p>To find the target frequency, I rearranged the tension formula:</p>
+  <div class="formula">f = √((T<sub>lbf</sub> × 32.174) / (4WL²))</div>
+  <p>Using my numbers:</p>
+  <ul>
+    <li><strong>T</strong> = 54</li>
+    <li><strong>W</strong> = 0.03279</li>
+    <li><strong>L</strong> = 13.5 / 12 = 1.125 ft</li>
+  </ul>
+  <p>The target came out to about:</p>
+  <div class="formula">102 Hz</div>
+  <p>So in theory, if the belt is tensioned to around <strong>54 lbf</strong>, plucking the 13.5-inch belt span should produce a frequency near <strong>102 Hz</strong>.</p>
+
+  <h2>Q: Could I just use a phone app?</h2>
+  <p>Maybe, but I wanted something customized to my specific belt and washer.</p>
+  <p>So I co-created a small website with <strong>ChatGPT 5.5</strong> that runs in the browser. It uses the iPhone microphone, listens for the plucked belt frequency, and calculates tension using the same formula.</p>
+  <p>The page lets me enter target tension, free span length, belt weight, belt loop length, and measured frequency. Then it calculates belt weight per foot, target frequency, and estimated belt tension from the measured frequency.</p>
+  <p><a class="button" href="https://interactivetech.github.io/belt-tension/">Open the GitHub Pages calculator</a></p>
+
+  <h2>Q: How did the first test go?</h2>
+  <p>At first, not great.</p>
+  <p>I tried strumming the belt with a knife and got a low reading around <strong>23 Hz</strong>. The website calculated a ridiculously low tension, around <strong>2.8 lbf</strong>.</p>
+  <p>That was a good reminder: the math can be right while the measurement is wrong.</p>
+  <p>A knife is not ideal because it can make a metallic click, scrape the belt, or excite weird vibration modes. A finger, fingernail, plastic handle, pen cap, or wooden dowel is better.</p>
+  <p>After plucking louder and adjusting the technique, I got a reading around <strong>57 Hz</strong>. The website calculated about <strong>15.7 lbf</strong>. That was more plausible, but still far below the 102 Hz target.</p>
+
+  <h2>Q: Did I keep tightening until I hit exactly 102 Hz?</h2>
+  <p>No, and that was probably the right call.</p>
+  <p>The frequency method is useful, but my setup was still DIY. There are plenty of ways the reading could be off:</p>
+  <ul>
+    <li>The iPhone microphone might pick up noise.</li>
+    <li>The website might lock onto a lower harmonic or thump.</li>
+    <li>The belt might be damped and not ring cleanly.</li>
+    <li>The free span measurement might be slightly off.</li>
+    <li>The target tension spec might not apply perfectly to this exact installation.</li>
+    <li>The belt might behave differently than an ideal vibrating string.</li>
+  </ul>
+  <p>Also, over-tightening a washer belt can be worse than leaving it a little under target. Too much tension can stress the motor shaft, bearings, pulleys, and belt.</p>
+  <p>So instead of blindly chasing the number, I used the website as a sanity check and combined it with practical repair judgment.</p>
+
+  <h2>Q: What were the practical checks?</h2>
+  <p>After replacing the motor and belt, I cared about whether the washer behaved correctly:</p>
+  <ul>
+    <li>Does the belt track properly?</li>
+    <li>Does the pulley rotate smoothly by hand?</li>
+    <li>Does the belt slip under load?</li>
+    <li>Is there squealing?</li>
+    <li>Is there a burning rubber smell?</li>
+    <li>Does the belt get unusually hot?</li>
+    <li>Does the washer agitate and spin normally?</li>
+  </ul>
+  <p>The belt rotated fine and did not seem obviously loose. So I decided not to stress over hitting a perfect frequency number.</p>
+  <p>That was the real lesson: the homemade tension gauge was a tool, not the final authority.</p>
+
+  <h2>Q: What did I learn?</h2>
+  <p>I started with a simple washer repair and ended up learning how belt tension gauges work.</p>
+  <p>The most useful takeaways were:</p>
+  <ol>
+    <li>A digital belt tension gauge is basically a frequency reader plus math.</li>
+    <li>The key formula is <strong>T<sub>lbf</sub> = 4WL²f² / 32.174</strong>.</li>
+    <li>The free span is not center-to-center pulley distance.</li>
+    <li>The belt’s actual weight matters.</li>
+    <li>An iPhone microphone can be useful, but it is not automatically reliable.</li>
+    <li>DIY measurements should be combined with common sense.</li>
+    <li>Building a quick website with ChatGPT 5.5 made the whole process easier and more fun.</li>
+  </ol>
+  <p>In the end, the washer repair became more than just swapping a motor and belt. It became a mini physics experiment, a web app project, and a reminder that sometimes fixing an appliance is also a great excuse to learn something new.</p>
+
+  <footer>
+    <p><a href="https://interactivetech.github.io/belt-tension/">Calculator</a> · <a href="https://github.com/interactivetech/interactivetech.github.io/tree/master/belt-tension">GitHub source</a></p>
+  </footer>
+</article>
+</body>
+</html>
