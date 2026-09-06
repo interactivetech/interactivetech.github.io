@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-06",
+  "entries": [
+    {
+      "tag": "Self-improving agents",
+      "title": "Tree-of-Experience: Hierarchical Experience Management for Self-Evolving Agents",
+      "summary": "Tree-of-Experience organizes an agent's accumulated experience as a shared hierarchy of reasoning perspectives and paths, with reliability updated from environmental outcomes; it is a direct architecture for turning interaction history into reusable self-evolution rather than a flat episodic memory.",
+      "date": "2026-08-10",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2608.09044"}
+      ]
+    },
+    {
+      "tag": "Self-improving agents",
+      "title": "Critic Experience Bank: Self-Evolving Step-Level Confidence Estimation for LLM Agents",
+      "summary": "Critic Experience Bank lets an agent's critic improve from its own execution history by storing hindsight pseudo-labels for productive and unproductive steps and retrieving analogous experiences before future actions, without critic training or ground-truth step labels.",
+      "date": "2026-07-14",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2607.12397"}
+      ]
+    },
+    {
+      "tag": "Self-improving agents",
+      "title": "Reinforcement Learning for Self-Improving Agent with Skill Library (SAGE)",
+      "summary": "SAGE uses Skill Augmented GRPO, sequential rollouts, and a skill-integrated reward so useful skills discovered on earlier tasks become reusable assets on later tasks; on AppWorld it improves completion while reducing interaction steps and generated tokens.",
+      "date": "2026-07-05",
+      "links": [
+        {"title": "Paper (ACL 2026)", "url": "https://aclanthology.org/2026.acl-long.69/"},
+        {"title": "Official code (GitHub)", "url": "https://github.com/amazon-science/SAGE"}
+      ]
+    },
+    {
+      "tag": "Looped transformers",
+      "title": "Universal Transformers for Circuit Computations: Perfect Length Generalization in Tiny Transformers",
+      "summary": "A 280-parameter universal-transformer construction iteratively performs depth-1 circuit reductions with autonomous halting, giving provably correct Boolean-expression evaluation at arbitrary depth and perfect length generalization on several algorithmic benchmarks.",
+      "date": "2026-08-31",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2608.31067"}
+      ]
+    },
+    {
+      "tag": "Looped transformers",
+      "title": "RecurrentGPT: Expressive Depth through Recurrent Modulation in Transformers",
+      "summary": "RecurrentGPT brackets a shared recurrent core with fixed prelude and coda blocks and gates each depth recurrence, showing that adaptive layer reuse can approach dense-transformer quality with substantially fewer parameters and lower decoding memory.",
+      "date": "2026-08-15",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2608.15062"},
+        {"title": "Official code (GitHub)", "url": "https://github.com/Amr-Hegazy1/gated-recurrent-transformer"}
+      ]
+    },
+    {
+      "tag": "Looped transformers",
+      "title": "T²MLR: Transformer with Temporal Middle-Layer Recurrence",
+      "summary": "T²MLR carries a cached middle-layer representation from the previous token into an earlier layer of the current token, preserving latent computation across decoding steps; recurrence over only a small middle block can outperform full-layer recurrence and can retrofit pretrained models.",
+      "date": "2026-07-16",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2607.15178"},
+        {"title": "Official code (GitHub)", "url": "https://github.com/princeton-pli/T2MLR"}
+      ]
+    },
+    {
+      "tag": "Continual-learning transformers",
+      "title": "Retrieval-Augmented Decision Transformer: External Memory for In-context RL",
+      "summary": "RA-DT equips a Decision Transformer with an external memory of past sub-trajectories and retrieves only experiences relevant to the current state, extending in-context reinforcement learning to longer tasks without packing entire episodes into the context window.",
+      "date": "2026-08-11",
+      "links": [
+        {"title": "Paper (CoLLAs 2026 / PMLR)", "url": "https://proceedings.mlr.press/v330/schmied26a.html"},
+        {"title": "Official code (GitHub)", "url": "https://github.com/ml-jku/RA-DT"}
+      ]
+    },
+    {
+      "tag": "Continual-learning transformers",
+      "title": "Lifelong In-Context Learning with Transformers Requires Parametric Forms of Attention",
+      "summary": "This paper argues that lifelong transformer learning needs parametric attention—such as linear attention, fast weights, state-space mechanisms, or test-time-training layers—that can continually absorb context into fixed-size learned state instead of an ever-growing KV cache.",
+      "date": "2026-06-24",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2606.25342"}
+      ]
+    },
+    {
+      "tag": "Continual-learning transformers",
+      "title": "ELLA: Efficient Lifelong Learning for Adapters in Large Language Models",
+      "summary": "ELLA uses selective subspace de-correlation to protect high-energy task-specific adapter updates while leaving residual directions available for forward transfer, yielding replay-free continual adaptation with memory and compute that stay constant as tasks accumulate.",
+      "date": "2026-03-24",
+      "links": [
+        {"title": "Paper (EACL 2026)", "url": "https://aclanthology.org/2026.eacl-long.84/"}
+      ]
+    },
+    {
+      "tag": "Self-improving transformers",
+      "title": "Self-Improving Transformers Overcome Easy-to-Hard and Length Generalization Challenges",
+      "summary": "Standard Transformers iteratively generate and learn from their own solutions on progressively harder instances, enabling dramatic easy-to-hard and length generalization—including 10-digit to 100-digit addition—without changing the model architecture.",
+      "date": "2025-07-13",
+      "links": [
+        {"title": "Paper (ICML 2025 / PMLR)", "url": "https://proceedings.mlr.press/v267/lee25d.html"},
+        {"title": "Author code (GitHub)", "url": "https://github.com/JackCai1206/arithmetic-self-improve"}
+      ]
+    },
+    {
+      "tag": "Self-improving transformers",
+      "title": "End-to-End Test-Time Training for Long Context",
+      "summary": "TTT-E2E turns a sliding-window Transformer into a model that keeps learning during inference via next-token prediction, compressing long context into its weights while meta-learning an initialization designed to adapt efficiently at test time.",
+      "date": "2025-12-29",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2512.23675"},
+        {"title": "Official code (GitHub)", "url": "https://github.com/test-time-training/e2e"}
+      ]
+    },
+    {
+      "tag": "Self-improving transformers",
+      "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+      "summary": "Test-Time Training layers make the recurrent hidden state itself a learnable model—either linear or an MLP—and update it with self-supervised learning on the incoming test sequence, making online adaptation a first-class sequence-modeling primitive.",
+      "date": "2025-07-13",
+      "links": [
+        {"title": "Paper (ICML 2025 / PMLR)", "url": "https://proceedings.mlr.press/v267/sun25h.html"},
+        {"title": "Official JAX code (GitHub)", "url": "https://github.com/test-time-training/ttt-lm-jax"}
+      ]
+    }
+  ]
+}
