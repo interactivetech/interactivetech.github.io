@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-12",
+  "entries": [
+    {
+      "tag": "Self-improving agents",
+      "title": "Experience Funnel: A State-Policy Alternating Loop for Self-Evolving Agents",
+      "summary": "Experience Funnel alternates fast textual-state updates with slower policy consolidation, selectively distilling reusable behavior from validated interaction experience into the model so each new state-policy pair can generate better evidence for the next improvement cycle.",
+      "date": "2026-09-08",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.08919"}
+      ]
+    },
+    {
+      "tag": "Self-improving agents",
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "summary": "Procedural Graphs externalize what-to-do knowledge as editable procedure-relation-procedure graphs and let an LLM refiner evolve graph topology and guidance from successful versus failed trajectories, accepting only edits that preserve or improve held-out validation.",
+      "date": "2026-09-08",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.09153"}
+      ]
+    },
+    {
+      "tag": "Self-improving agents",
+      "title": "SE-GoS: Self-Evolving Graph-of-Skills for Skill Library at Scale",
+      "summary": "SE-GoS improves a large agent skill graph directly from execution traces by evolving topology, edge weights, and retrieval-facing descriptions, yielding higher task reward and lower input-token use without retraining the underlying model.",
+      "date": "2026-09-08",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.08228"}
+      ]
+    },
+    {
+      "tag": "Looped transformers",
+      "title": "Reason Through the Latent! Making Latent Visual Reasoning Necessary",
+      "summary": "Causal Visual Recurrent Reasoning makes a recurrent hidden state the required image-conditioned path to a vision-language model's answer, repeatedly refining that state while rereading fixed visual evidence so latent computation is causally necessary rather than merely present.",
+      "date": "2026-09-06",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.06746"}
+      ]
+    },
+    {
+      "tag": "Looped transformers",
+      "title": "Looped GPT-BERT: Trading Parameters for Computation in Small Language Modeling",
+      "summary": "Looped GPT-BERT applies depth-wise parameter sharing so four physical layers execute twelve recurrent traversals, showing that extra recurrent computation can recover competitive BabyLM linguistic performance with a substantially smaller parameter set.",
+      "date": "2026-09-09",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.09691"}
+      ]
+    },
+    {
+      "tag": "Looped transformers",
+      "title": "Thinking with Looped Flows",
+      "summary": "Looped Flows trains recurrent computation with local denoising objectives linked across time by shared, progressively reduced noise, then spends more inference compute by integrating a learned probability flow; it improves over prior looped models across six reasoning benchmarks.",
+      "date": "2026-09-10",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.11801"}
+      ]
+    },
+    {
+      "tag": "Continual-learning transformers",
+      "title": "Continual Learning Mechanisms Compose for Long-Horizon Memorization",
+      "summary": "Across 100 sequential language-model update tasks, the paper finds that composing data, function, and weight anchors with low-rank allocation is far stronger than any single continual-learning mechanism, raising average final retention from 1.2% to 34.9%.",
+      "date": "2026-09-07",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.06986"},
+        {"title": "Official code (GitHub)", "url": "https://github.com/cozheyuanzhangde/compose-cl"}
+      ]
+    },
+    {
+      "tag": "Continual-learning transformers",
+      "title": "When Synthetic Data Hurts: On Catastrophic Forgetting in Skill Retrieval for LLM Agents",
+      "summary": "A 34,396-skill Qwen retrieval study shows synthetic-data fine-tuning can erase real and out-of-distribution skill competence, while continual-learning regularizers such as embedding anchoring, LwF, EWC, and L2-to-initialization preserve prior retrieval and still improve the synthetic domain.",
+      "date": "2026-09-09",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.10750"}
+      ]
+    },
+    {
+      "tag": "Continual-learning transformers",
+      "title": "Grounding Agent Memory: Environment-Probing Curation for Enterprise Agents",
+      "summary": "Environment-probing curation gives a persistent-memory LLM agent's asynchronous curator read-only world tools to verify, scope, and refresh memories across sessions, improving CLBench pass rate from 39% to 73% without retraining the task model or changing its retriever.",
+      "date": "2026-09-10",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.11060"}
+      ]
+    },
+    {
+      "tag": "Self-improving transformers",
+      "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness",
+      "summary": "NeoHorse-1 turns routing and evaluation traces into a three-stage post-training curriculum plus routing-guided on-policy distillation, then feeds capability evaluation back into the next training mixture to close an evaluation-selection-update self-improvement loop.",
+      "date": "2026-09-08",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.08183"},
+        {"title": "Official code (GitHub)", "url": "https://github.com/TokenRhythm/NeoHorse"}
+      ]
+    },
+    {
+      "tag": "Self-improving transformers",
+      "title": "LeCor: Learning to Be Corrected by Meta-Learned Test-Time Training for Interactive 3D Lung-Tumour Segmentation",
+      "summary": "LeCor converts user corrections into test-time gradient updates on small per-case adapters that are meta-learned to improve unclicked slices, turning a promptable SAM 3 system from memory-only correction into an architecture that learns during deployment.",
+      "date": "2026-09-08",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.09477"}
+      ]
+    },
+    {
+      "tag": "Self-improving transformers",
+      "title": "Data-Efficient Language Modeling: From Frontier Advancement to Principle-Guided Model Improvement",
+      "summary": "A BabyLM research program links autonomous experimentation, principle discovery, and principle-guided continuation training so findings from one generation change the next model-design cycle, providing an empirical example of research-process recursive self-improvement.",
+      "date": "2026-09-09",
+      "links": [
+        {"title": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.10702"}
+      ]
+    }
+  ]
+}
