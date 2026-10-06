@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-06",
+  "entries": [
+    {
+      "tag": "Self-improving agents",
+      "title": "MESH-Harness: Self-Improving Agent Harnesses via Bandit-Guided Compositional Evolution",
+      "summary": "Modular harness variants are recombined by a bandit-guided search, with validation-driven edits feeding reusable module pools for later improvement.",
+      "date": "2026-10-04",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.05300"
+        }
+      ]
+    },
+    {
+      "tag": "Self-improving agents",
+      "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
+      "summary": "VERSE uses execution verification to evolve both an executor harness and the optimizer's own prompts, skills, tools, hooks, and notes.",
+      "date": "2026-10-02",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.02616"
+        },
+        {
+          "title": "Official code (GitHub)",
+          "url": "https://github.com/wzekai/VERSE"
+        }
+      ]
+    },
+    {
+      "tag": "Self-improving agents",
+      "title": "SEIS: Self-Evolving Inference Systems",
+      "summary": "Successive agent sessions inherit experience and code changes to optimize an LLM inference engine end to end, producing cumulative system improvement.",
+      "date": "2026-10-03",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.04646"
+        }
+      ]
+    },
+    {
+      "tag": "Looped transformers",
+      "title": "Looping Beyond Twice: A Scalable Recipe for Looped Mixture-of-Experts",
+      "summary": "LOOM stabilizes deep recurrent MoE computation and diversifies expert routing, enabling useful scaling to substantially more than two loops.",
+      "date": "2026-10-01",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.01153"
+        },
+        {
+          "title": "Official code (GitHub)",
+          "url": "https://github.com/hed-ucas/LOOM"
+        }
+      ]
+    },
+    {
+      "tag": "Looped transformers",
+      "title": "Decoding Looped Transformers Better for (Almost) Free",
+      "summary": "LoopCD contrasts early and final recurrent predictions, turning otherwise discarded loop states into training-free decoding guidance that can reduce required depth.",
+      "date": "2026-10-01",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.02185"
+        }
+      ]
+    },
+    {
+      "tag": "Looped transformers",
+      "title": "LiFT: Loop Flow Transformers",
+      "summary": "LiFT gives recurrent Diffusion Transformer steps continuous correction targets, allowing inference to extrapolate beyond training depth and improve with extra loops.",
+      "date": "2026-10-04",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.05538"
+        }
+      ]
+    },
+    {
+      "tag": "Continual-learning transformers",
+      "title": "Off-Policy Merging Beats On-Policy Self-Distillation for Continual Learning",
+      "summary": "Grafting learns updates on earlier checkpoints and merges scaled updates into post-trained LMs, reducing interference between new and retained capabilities.",
+      "date": "2026-10-05",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.05872"
+        }
+      ]
+    },
+    {
+      "tag": "Continual-learning transformers",
+      "title": "Task Vector Descent: Learning from Non-IID Batches",
+      "summary": "Partial integration of task vectors and optimizer state improves stability-plasticity when language-model training data arrives in temporally clustered distributions.",
+      "date": "2026-10-04",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.05402"
+        }
+      ]
+    },
+    {
+      "tag": "Continual-learning transformers",
+      "title": "The Optimization Landscape of Learning Compacted Context Models",
+      "summary": "A simplified Perceiver-style compactor improves continuous KV-memory compression for frozen language models, supporting bounded external state as experience accumulates.",
+      "date": "2026-10-05",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.05885"
+        }
+      ]
+    },
+    {
+      "tag": "Self-improving transformers",
+      "title": "ASCENT: Online Test-Time Training of Long-Horizon Agents via Self-Distillation of Verified Experience",
+      "summary": "ASCENT distills an LLM's verified deployment trajectories into persistent LoRA fast weights, letting performance improve as cross-task experience accumulates.",
+      "date": "2026-10-04",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.05303"
+        },
+        {
+          "title": "Project page",
+          "url": "https://artificer-ai-lab.github.io/ASCENT"
+        }
+      ]
+    },
+    {
+      "tag": "Self-improving transformers",
+      "title": "Dynamic Routing as a New Dimension for Test-time Versatility of LLMs",
+      "summary": "Few demonstrations select layer-skipping or layer-iteration programs, adapting a frozen Transformer's computation to new tasks without gradient updates.",
+      "date": "2026-10-03",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.04751"
+        }
+      ]
+    },
+    {
+      "tag": "Self-improving transformers",
+      "title": "Efficient Test-time Adaptation through Candidate Verification and Divergence Shifts",
+      "summary": "Test-Time Correction adapts VLM predictions by verifying candidate labels against latent memory-bank geometry, avoiding iterative optimization at inference.",
+      "date": "2026-10-05",
+      "links": [
+        {
+          "title": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2610.06147"
+        }
+      ]
+    }
+  ]
+}
